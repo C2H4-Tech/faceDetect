@@ -12,25 +12,28 @@
 <img src="demo.gif" alt="Overview" width="40%" height="40%">
 </p>
 
+
+C2H4 Tech is pleased to offer the out-of-box android libeary for Joint Face Detection and Alignment using [Multi-task Cascaded Convolutional Neural Networks](https://arxiv.org/abs/1604.02878). 
+This dynamic library used in the library is developed by compiling C++ codes using Android DNK, which incorporates some static libraries from opencv and [ncnn](https://github.com/Tencent/ncnn). The size of dymamic library and cnn weights are  3.9MB and supports armeabi and armeabi-v7a CPUs. Our tests show that this face detection algorithm can prcess one frame in 30-60ms using the phone with MediaTek MT6755 CPU(2.0GHZ). 
 ## faceDetect
 
-#### add dependencies
+#### Add dependencies
 add compile 'com.github.C2H4-Tech:faceDetect:1.0'
 
-#### init
-DetectManager.init(context)
+#### Initalize the face detector
+DetectManager.init(context);
 
-#### supply methods
+#### Supplied methods
 
-Tips:all below methods return object Bbox which contains eyedistance、5 points and  one bound 
+Tips: All below methods return object Bbox which contains eyedistance, 5 points and top left bottom right coordinates of  bounding box.
 
 1.Detect(int width, int height, byte[] NV21FrameData)
 
-this method can be used for situation which call onPreviewFrame(byte[] data, Camera camera) when camera is in state of preview.Detecting face information from every camera buffer
+This method can be used for situation on which call onPreviewFrame(byte[] data, Camera camera) when camera is in state of preview.Detecting face information from every camera buffer.
 
 2.DetectImage(Bitmap bitmap)
 
-suit for detecting face information from bitmap
+Suit for detecting face information from bitmap.
 
 # ncnn
 
