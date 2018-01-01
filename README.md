@@ -5,7 +5,7 @@
 以息科技现提供在手机端利用深度学习进行[人脸识别和关键点定位(MTCNN)](https://arxiv.org/abs/1604.02878)的安卓库。深度学习的计算框架利用[腾讯ncnn](https://github.com/Tencent/ncnn)。该项目参考ElegantGod的[Repo](https://github.com/ElegantGod/ncnn)并在P-net, R-net和O-net所需的CNN处理线程做了优化。利用Android NDK对MTCNN的C++代码进行编译生成动态库并且包含部分OpenCV和ncnn的静态库。这个安卓库的文件大小在3.9MB左右 并且 支持 armeabi and armeabi-v7a CPU。此人脸识别算法在搭载 联发科 MT6755 CPU(2.0GHZ)的手机上处理每帧图片所需时长平均是30-60ms。
 
 C2H4 Tech is pleased to offer the out-of-box android libeary for Joint Face Detection and Alignment using [Multi-task Cascaded Convolutional Neural Networks](https://arxiv.org/abs/1604.02878). 
-This dynamic library used in the library is developed by compiling C++ codes using Android DNK, which incorporates some static libraries from opencv and [ncnn](https://github.com/Tencent/ncnn). The size of dymamic library and cnn weights are  3.9MB and supports armeabi and armeabi-v7a CPUs. Our tests show that this face detection algorithm can prcess one frame in 30-60ms using the phone with MediaTek MT6755 CPU(2.0GHZ). 
+This dynamic library used in the library is developed by compiling C++ codes using Android NDK, which incorporates some static libraries from opencv and [ncnn](https://github.com/Tencent/ncnn). The size of dymamic library and cnn weights are  3.9MB and supports armeabi and armeabi-v7a CPUs. Our tests show that this face detection algorithm can prcess one frame in 30-60ms using the phone with MediaTek MT6755 CPU(2.0GHZ). 
 
 <p align="center">
 <img src="demo.gif" alt="Overview" width="40%" height="40%">
