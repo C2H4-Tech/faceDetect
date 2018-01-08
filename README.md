@@ -14,7 +14,17 @@ This dynamic library used in the library is developed by compiling C++ codes usi
 ## faceDetect
 
 #### Add dependencies
-add compile 'com.github.C2H4-Tech:faceDetect:1.0'
+dependencies{
+   compile 'com.github.C2H4-Tech:faceDetect:1.0'
+}
+
+allprojects {
+    repositories {
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+}
 
 #### Initalize the face detector
 DetectManager.init(context);
