@@ -76,11 +76,11 @@ public class DetectManager {
         }
     }
 
-    public static Bbox Detect(int width, int height, byte[] NV21FrameData) {
+    public static float Detect(int width, int height, byte[] NV21FrameData) {
         return mSqueezeNcnn.Detect(width, height, NV21FrameData);
     }
 
-    public static Bbox DetectImage(Bitmap bitmap) {
+    public static float DetectImage(Bitmap bitmap) {
         return mSqueezeNcnn.DetectImg(bitmap);
     }
 }
