@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/FaceDetect.iml" filepath="$PROJECT_DIR$/FaceDetect.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample/app.iml" filepath="$PROJECT_DIR$/sample/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/faceDetect.iml" filepath="$PROJECT_DIR$/faceDetect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/facedetect/facedetect.iml" filepath="$PROJECT_DIR$/facedetect/facedetect.iml" />
       <module fileurl="file://$PROJECT_DIR$/facedetect/facedetect.iml" filepath="$PROJECT_DIR$/facedetect/facedetect.iml" />
     </modules>
   </component>
