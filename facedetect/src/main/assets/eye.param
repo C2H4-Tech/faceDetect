@@ -1,0 +1,67 @@
+7767517
+65 65
+Input            data             0 1 data 0=3 1=64 2=64
+Convolution      ConvNd_1         1 1 data ConvNd_1 0=32 1=3 2=1 3=2 4=1 5=0 6=864
+BatchNorm        BatchNorm_1      1 1 ConvNd_1 BatchNorm_1 0=32
+Scale            BatchNorm_1_scale 1 1 BatchNorm_1 BatchNorm_1_scale 0=32 1=1
+ReLU             Threshold_1      1 1 BatchNorm_1_scale Threshold_1 0=0.000000
+ConvolutionDepthWise ConvNd_2         1 1 Threshold_1 ConvNd_2 0=32 1=3 2=1 3=1 4=1 5=0 6=288 7=32
+BatchNorm        BatchNorm_2      1 1 ConvNd_2 BatchNorm_2 0=32
+Scale            BatchNorm_2_scale 1 1 BatchNorm_2 BatchNorm_2_scale 0=32 1=1
+ReLU             Threshold_2      1 1 BatchNorm_2_scale Threshold_2 0=0.000000
+Convolution      ConvNd_3         1 1 Threshold_2 ConvNd_3 0=64 1=1 2=1 3=1 4=0 5=0 6=2048
+BatchNorm        BatchNorm_3      1 1 ConvNd_3 BatchNorm_3 0=64
+Scale            BatchNorm_3_scale 1 1 BatchNorm_3 BatchNorm_3_scale 0=64 1=1
+ReLU             Threshold_3      1 1 BatchNorm_3_scale Threshold_3 0=0.000000
+ConvolutionDepthWise ConvNd_4         1 1 Threshold_3 ConvNd_4 0=64 1=3 2=1 3=2 4=1 5=0 6=576 7=64
+BatchNorm        BatchNorm_4      1 1 ConvNd_4 BatchNorm_4 0=64
+Scale            BatchNorm_4_scale 1 1 BatchNorm_4 BatchNorm_4_scale 0=64 1=1
+ReLU             Threshold_4      1 1 BatchNorm_4_scale Threshold_4 0=0.000000
+Convolution      ConvNd_5         1 1 Threshold_4 ConvNd_5 0=128 1=1 2=1 3=1 4=0 5=0 6=8192
+BatchNorm        BatchNorm_5      1 1 ConvNd_5 BatchNorm_5 0=128
+Scale            BatchNorm_5_scale 1 1 BatchNorm_5 BatchNorm_5_scale 0=128 1=1
+ReLU             Threshold_5      1 1 BatchNorm_5_scale Threshold_5 0=0.000000
+ConvolutionDepthWise ConvNd_6         1 1 Threshold_5 ConvNd_6 0=128 1=3 2=1 3=1 4=1 5=0 6=1152 7=128
+BatchNorm        BatchNorm_6      1 1 ConvNd_6 BatchNorm_6 0=128
+Scale            BatchNorm_6_scale 1 1 BatchNorm_6 BatchNorm_6_scale 0=128 1=1
+ReLU             Threshold_6      1 1 BatchNorm_6_scale Threshold_6 0=0.000000
+Convolution      ConvNd_7         1 1 Threshold_6 ConvNd_7 0=128 1=1 2=1 3=1 4=0 5=0 6=16384
+BatchNorm        BatchNorm_7      1 1 ConvNd_7 BatchNorm_7 0=128
+Scale            BatchNorm_7_scale 1 1 BatchNorm_7 BatchNorm_7_scale 0=128 1=1
+ReLU             Threshold_7      1 1 BatchNorm_7_scale Threshold_7 0=0.000000
+ConvolutionDepthWise ConvNd_8         1 1 Threshold_7 ConvNd_8 0=128 1=3 2=1 3=2 4=1 5=0 6=1152 7=128
+BatchNorm        BatchNorm_8      1 1 ConvNd_8 BatchNorm_8 0=128
+Scale            BatchNorm_8_scale 1 1 BatchNorm_8 BatchNorm_8_scale 0=128 1=1
+ReLU             Threshold_8      1 1 BatchNorm_8_scale Threshold_8 0=0.000000
+Convolution      ConvNd_9         1 1 Threshold_8 ConvNd_9 0=256 1=1 2=1 3=1 4=0 5=0 6=32768
+BatchNorm        BatchNorm_9      1 1 ConvNd_9 BatchNorm_9 0=256
+Scale            BatchNorm_9_scale 1 1 BatchNorm_9 BatchNorm_9_scale 0=256 1=1
+ReLU             Threshold_9      1 1 BatchNorm_9_scale Threshold_9 0=0.000000
+ConvolutionDepthWise ConvNd_10        1 1 Threshold_9 ConvNd_10 0=256 1=3 2=1 3=1 4=1 5=0 6=2304 7=256
+BatchNorm        BatchNorm_10     1 1 ConvNd_10 BatchNorm_10 0=256
+Scale            BatchNorm_10_scale 1 1 BatchNorm_10 BatchNorm_10_scale 0=256 1=1
+ReLU             Threshold_10     1 1 BatchNorm_10_scale Threshold_10 0=0.000000
+Convolution      ConvNd_11        1 1 Threshold_10 ConvNd_11 0=256 1=1 2=1 3=1 4=0 5=0 6=65536
+BatchNorm        BatchNorm_11     1 1 ConvNd_11 BatchNorm_11 0=256
+Scale            BatchNorm_11_scale 1 1 BatchNorm_11 BatchNorm_11_scale 0=256 1=1
+ReLU             Threshold_11     1 1 BatchNorm_11_scale Threshold_11 0=0.000000
+ConvolutionDepthWise ConvNd_12        1 1 Threshold_11 ConvNd_12 0=256 1=3 2=1 3=2 4=1 5=0 6=2304 7=256
+BatchNorm        BatchNorm_12     1 1 ConvNd_12 BatchNorm_12 0=256
+Scale            BatchNorm_12_scale 1 1 BatchNorm_12 BatchNorm_12_scale 0=256 1=1
+ReLU             Threshold_12     1 1 BatchNorm_12_scale Threshold_12 0=0.000000
+Convolution      ConvNd_13        1 1 Threshold_12 ConvNd_13 0=512 1=1 2=1 3=1 4=0 5=0 6=131072
+BatchNorm        BatchNorm_13     1 1 ConvNd_13 BatchNorm_13 0=512
+Scale            BatchNorm_13_scale 1 1 BatchNorm_13 BatchNorm_13_scale 0=512 1=1
+ReLU             Threshold_13     1 1 BatchNorm_13_scale Threshold_13 0=0.000000
+ConvolutionDepthWise ConvNd_14        1 1 Threshold_13 ConvNd_14 0=512 1=3 2=1 3=1 4=1 5=0 6=4608 7=512
+BatchNorm        BatchNorm_14     1 1 ConvNd_14 BatchNorm_14 0=512
+Scale            BatchNorm_14_scale 1 1 BatchNorm_14 BatchNorm_14_scale 0=512 1=1
+ReLU             Threshold_14     1 1 BatchNorm_14_scale Threshold_14 0=0.000000
+Convolution      ConvNd_15        1 1 Threshold_14 ConvNd_15 0=256 1=1 2=1 3=1 4=0 5=0 6=131072
+BatchNorm        BatchNorm_15     1 1 ConvNd_15 BatchNorm_15 0=256
+Scale            BatchNorm_15_scale 1 1 BatchNorm_15 BatchNorm_15_scale 0=256 1=1
+ReLU             Threshold_15     1 1 BatchNorm_15_scale Threshold_15 0=0.000000
+Pooling          AvgPool2d_1      1 1 Threshold_15 AvgPool2d_1 0=1 1=4 2=4 3=0 4=0
+Flatten          View_1           1 1 AvgPool2d_1 View_1
+InnerProduct     Addmm_1          1 1 View_1 Addmm_1 0=1 1=1 2=256
+Sigmoid          Sigmoid_1        1 1 Addmm_1 Sigmoid_1

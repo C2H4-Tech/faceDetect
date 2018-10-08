@@ -18,11 +18,11 @@ import android.graphics.Bitmap;
 
 public class SqueezeNcnn
 {
-    public native boolean Init(byte[] param1, byte[] bin1, byte[] param2, byte[] bin2, byte[] param3, byte[] bin3);
+    public native boolean Init(byte[] param1, byte[] bin1, byte[] param2, byte[] bin2, byte[] param3, byte[] bin3, byte[] param4, byte[] bin4);
 
 //    public native Bbox Detect(int width, int height, byte[] NV21FrameData);
 //    public native Bbox DetectImg(Bitmap bitmap);
-    public native float Detect(int width, int height, byte[] NV21FrameData);
+    public native float[] Detect(int width, int height, byte[] NV21FrameData);
     public native float DetectImg(Bitmap bitmap);
 
 
