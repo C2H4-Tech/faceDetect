@@ -52,7 +52,7 @@ public class DetectManager {
                 assetsInputStream.close();
             }
             {
-                InputStream assetsInputStream = assetManager.open("eye.param");
+                InputStream assetsInputStream = assetManager.open("eye.param.bin");
                 int available = assetsInputStream.available();
                 param4 = new byte[available];
                 int byteCode = assetsInputStream.read(param4);
