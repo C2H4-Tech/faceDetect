@@ -1,4 +1,5 @@
 <img src="logo.png" alt="Overview" width="10%" height="10%"> 
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 # 以息科技人脸识别安卓库
 
