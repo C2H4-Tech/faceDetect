@@ -25,6 +25,8 @@ public class DetectManager {
         byte[] bin2 = null;
         byte[] param3 = null;
         byte[] bin3 = null;
+        byte[] param4 = null;
+        byte[] bin4 = null;
         AssetManager assetManager = context.getAssets();
         try {
             {
@@ -50,6 +52,13 @@ public class DetectManager {
                 assetsInputStream.close();
             }
             {
+                InputStream assetsInputStream = assetManager.open("eye.param.bin");
+                int available = assetsInputStream.available();
+                param4 = new byte[available];
+                int byteCode = assetsInputStream.read(param4);
+                assetsInputStream.close();
+            }
+            {
                 InputStream assetsInputStream = assetManager.open("det1.bin");
                 int available = assetsInputStream.available();
                 bin1 = new byte[available];
@@ -70,17 +79,24 @@ public class DetectManager {
                 int byteCode = assetsInputStream.read(bin3);
                 assetsInputStream.close();
             }
-            mSqueezeNcnn.Init(param1, bin1, param2, bin2, param3, bin3);
+            {
+                InputStream assetsInputStream = assetManager.open("eye.bin");
+                int available = assetsInputStream.available();
+                bin4 = new byte[available];
+                int byteCode = assetsInputStream.read(bin3);
+                assetsInputStream.close();
+            }
+            mSqueezeNcnn.Init(param1, bin1, param2, bin2, param3, bin3, param4, bin4);
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
 
-    public static Bbox Detect(int width, int height, byte[] NV21FrameData) {
+    public static float[] Detect(int width, int height, byte[] NV21FrameData) {
         return mSqueezeNcnn.Detect(width, height, NV21FrameData);
     }
 
-    public static Bbox DetectImage(Bitmap bitmap) {
+    public static float DetectImage(Bitmap bitmap) {
         return mSqueezeNcnn.DetectImg(bitmap);
     }
 }
