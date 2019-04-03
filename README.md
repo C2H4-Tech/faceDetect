@@ -1,7 +1,10 @@
 <img src="logo.png" alt="Overview" width="10%" height="10%"> 
+
 # 以息科技人脸识别安卓库
+
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+
 
 以息科技现提供在手机端利用深度学习进行[人脸识别和关键点定位(MTCNN)](https://arxiv.org/abs/1604.02878)的安卓库。深度学习的计算框架利用[腾讯ncnn](https://github.com/Tencent/ncnn)。该项目参考ElegantGod的[Repo](https://github.com/ElegantGod/ncnn)并在P-net, R-net和O-net所需的CNN处理线程做了优化。利用Android NDK对MTCNN的C++代码进行编译生成动态库并且包含部分OpenCV和ncnn的静态库。这个安卓库的文件大小在3.9MB左右 并且 支持 armeabi and armeabi-v7a CPU。此人脸识别算法在搭载 联发科 MT6755 CPU(2.0GHZ)的手机上处理每帧图片所需时长平均是30-60ms。
 
